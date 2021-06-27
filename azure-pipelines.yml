@@ -3,9 +3,9 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-variables:
- - name: projectName
-   value: contoso
+# variables:
+#  - name: projectName
+#    value: contoso
    
 trigger:
 - main
@@ -14,16 +14,16 @@ trigger:
 #   vmImage: ubuntu-latest
 
 
-steps: 
-- bash: echo $(projectName)
-- powershell: echo $(projectName)
-- script: echo $(projectName)
+# steps: 
+# - bash: echo $(projectName)
+# - powershell: echo $(projectName)
+# - script: echo $(projectName)
 
 
-# steps:
-# - task: ArchiveFiles@2
-#   inputs:
-#     rootFolderOrFile: '$(build.sourcesDirectory)'
-#     includeRootFolder: false
-# - task: PublishBuildArtifacts@1
+steps:
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(build.sourcesDirectory)'
+    includeRootFolder: false
+- task: PublishBuildArtifacts@1
 
