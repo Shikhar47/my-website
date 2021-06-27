@@ -14,16 +14,16 @@ trigger:
 #   vmImage: ubuntu-latest
 
 
-# steps: 
-# - bash: echo $(projectName)
-# - powershell: echo $(projectName)
-# - script: echo $(projectName)
+steps: 
+- bash: echo $(projectName)
+- powershell: echo $(projectName)
+- script: echo $(projectName)
 
 
-steps:
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(build.sourcesDirectory)'
-    includeRootFolder: false
-- task: PublishBuildArtifacts@1
+# steps:
+# - task: ArchiveFiles@2
+#   inputs:
+#     rootFolderOrFile: '$(build.sourcesDirectory)'
+#     includeRootFolder: false
+# - task: PublishBuildArtifacts@1
 
